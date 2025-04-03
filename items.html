@@ -18,17 +18,17 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fst-normal fw-normal">
         <li class="nav-item me-3"><a href="index.html" class="nav-link text-white">Hlavní stránka</a></li>
         <li class="nav-item me-3"><a href="items.html" class="nav-link text-white">Produkty</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-white bg-primary rounded-5" data-bs-toggle="modal" data-bs-target="#loginModal">Přihlásit se</a></li>
       </ul>
     </div>
   </div>
 </nav>
 <header class="bg-light"></header>
-<h1 class="text-center text-decoration-underline my-5">Produkty</h1>
+<div class="d-flex justify-content-center"><h1 class="text-center text-decoration-underline my-5 fw-bold rounded-5 w-25 text-white"style="font-family: Corbel; font-size: 3rem; background: dodgerblue">Produkty</h1></div>
 <p class="fs-4 text-center">List všech našich produktů které nabízíme</p>
 
 <section class="container" id="products">
   <div class="row">
-    <p class="fw-bold fs-3 text-center">Produkty</p>
     <div class="col-md-6 col-lg-4 mb-3">
       <div class="card"><img src="https://placehold.co/600x400" class="card-img-top" alt="product1">
         <div class="card-body"><h5 class="card-title">První produkt</h5>
@@ -94,6 +94,40 @@
     </div>
   </div>
 </section>
+
+<div class="modal" id="loginModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">Přihlásit se</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form novalidate>
+          <div class="my-2">
+            <label for="email" class="form-label">E-mail:</label>
+            <input id="email" type="email" class="form-control" placeholder="johnporkvstimcheese@gmail.com" required>
+          </div>
+          <div class="my-2">
+            <label for="password" class="form-label">Heslo:</label>
+            <input id="password" type="password" class="form-control" placeholder="Zadejte heslo" required>
+          </div>
+
+          <div class="my-2">
+            <input type="checkbox" class="form-check-input" name="Stay" id="stay">
+            <label class="form-check-label" for="stay">Zapamatovat si mě</label>
+          </div>
+          <div class="my-2">
+            <a href="#">Zapomenuté heslo?</a>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary">Přihlásit se</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 <footer class="bg-dark text-white text-center py-3">
   Made by Jan Vašíček

@@ -18,6 +18,7 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fst-normal fw-normal">
         <li class="nav-item me-3"><a href="index.html" class="nav-link  text-white">Hlavní stránka</a></li>
         <li class="nav-item me-3"><a href="items.html" class="nav-link text-white">Produkty</a></li>
+        <li class="nav-item me-3"><a href="#" class="nav-link text-white bg-primary rounded-5" data-bs-toggle="modal" data-bs-target="#loginModal">Přihlásit se</a></li>
       </ul>
     </div>
   </div>
@@ -26,11 +27,11 @@
   <h1 class="text-center my-5" style="font-family: 'Felix Titling'; font-size: 6rem">Aqua Shop</h1>
   <p class="text-center " style="font-size: 2rem; font-family: 'Corbel" >Jsme firma která vyvíjí moderní softwarová řešení pro firmy i jednotlivce.</p>
   <p class="text-center " style="font-size: 1.7rem; font-family: Corbel" >Zaměřujeme se na efektivitu, bezpečnost a inovace, které usnadňují správu dat a
-    automatizaci procesů.</p></header>
+    automatizaci procesů.</p>
 <div class="container text-center mt-3" >
   <a href="#aboutus" class="btn btn-dark btn-lg mx-3 btn-outline-light">O nás</a>
   <a href="#products" class="btn btn-dark btn-lg mx-3 btn-outline-light">Produkty</a>
-</div>
+</div></header>
 
 <div class="container-fluid mt-4">
   <div class="row justify-content-center">
@@ -50,15 +51,23 @@
 
     <div class="col-lg-6 mb-2 ">
       <h2 class="text-white my-5 rounded-5 text-center" style="font-size: 5rem; font-family: 'Felix Titling'; background: dodgerblue">O nás</h2>
-      <p class="text-white rounded-3" style="font-family: Corbel; font-size: 2rem; background: dodgerblue">TEXT O FIRMĚ</p>
+        <div class="text-white rounded-3" style="font-family: Corbel; font-size: 1.7rem; background: dodgerblue">
+      <p>TEXT O FIRMĚ</p>
+      <p>TEXT O FIRMĚ</p>
+      <p>TEXT O FIRMĚ</p>
+      <p>TEXT O FIRMĚ</p>
+      <p>TEXT O FIRMĚ</p>
+      <p>TEXT O FIRMĚ</p>
+        </div>
     </div>
   </div>
 </section>
 
 <section class="container " id="products">
   <div class="row">
-    <p class=" fw-bold text-center my-5 rounded-5 w-25 text-white" style="font-size: 2.5rem; background: dodgerblue">Produkty</p>
-    <p class="text-end" style="font-size: 1.2rem" ><a href="items.html">Zobrazit více</a></p>
+    <div class="d-flex justify-content-center"><p class="text-center fw-bold my-5 rounded-5 w-25 text-white" style="font-size: 2.5rem; background: dodgerblue">Produkty</p>
+    </div>
+    <p class="text-end" style="font-size: 1.2rem"><a href="items.html">Zobrazit více</a></p>
     <div class="col-md-6 col-lg-4 mb-3">
       <div class="card"><img src="https://placehold.co/600x400" class="card-img-top" alt="product1">
         <div class="card-body"><h5 class="card-title">První produkt</h5>
@@ -76,15 +85,72 @@
     <div class="col-md-6 col-md-6 col-lg-4 mb-3">
       <div class="card"><img src="https://placehold.co/600x400" class="card-img-top" alt="product3">
         <div class="card-body"><h5 class="card-title">Třetí produkt</h5>
-          <p class="card-text">zzz</p>                    <a
-                  href="#" class="btn btn-primary">Koupit</a></div>
+          <p class="card-text">zzz</p>
+          <a href="#" class="btn btn-primary">Koupit</a></div>
       </div>
     </div>
   </div>
 </section>
 
+<div class="modal" id="loginModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">Přihlásit se</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form novalidate>
+          <div class="my-2">
+            <label for="email" class="form-label">E-mail:</label>
+            <input id="email" type="email" class="form-control" placeholder="johnpork@gmail.com" required>
+          </div>
+          <div class="my-2">
+            <label for="password" class="form-label">Heslo:</label>
+            <input id="password" type="password" class="form-control" placeholder="Zadejte heslo" required>
+          </div>
+
+          <div class="my-2">
+            <input type="checkbox" class="form-check-input" name="Stay" id="stay">
+            <label class="form-check-label" for="stay">Zapamatovat si mě</label>
+          </div>
+          <div class="my-2">
+            <a href="#">Zapomenuté heslo?</a>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary">Přihlásit se</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5 rounded-4" style="" id="contactus">
+    <div class="d-flex justify-content-center"><h2 class="text-center my-5 rounded-5 w-25 text-white"style="background:dodgerblue">Kontaktujte nás</h2></div>
+    <form>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="name" class="form-label fw-bold fs-4">Jméno</label>
+                <input type="text" class="form-control" id="name" placeholder="John Pork" required>
+            </div>
+            <div class="col-md-6">
+                <label for="email_conctactus" class="form-label fw-bold fs-4">E-mail</label>
+                <input type="email" class="form-control" id="email_conctactus" placeholder="johnpork@gmail.com">
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label fw-bold fs-4">Zpráva</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Vaše zpráva"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="font-size: 23px">Odeslat</button>
+        </form>
+    </div>
+<br>
+<br>
+<br>
 <footer class="bg-dark text-white text-center py-3">
-  Made by Jan Vašíček
+    Made by Jan Vašíček
 </footer>
 
 <script src="./js/bootstrap.bundle.min.js"></script>
