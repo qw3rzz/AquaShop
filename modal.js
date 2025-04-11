@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize product modal functionality
     initProductModal();
 });
 
 function initProductModal() {
-    // Get modal elements
     const productModal = document.getElementById('productModal');
     const modalImage = document.getElementById('modalImage');
     const modalTitle = document.getElementById('modalTitle');
@@ -13,7 +11,6 @@ function initProductModal() {
     const closeModal = document.getElementById('closeModal');
     const addToCart = document.getElementById('addToCart');
 
-    // Function to open product modal
     function openProductModal(product) {
         modalImage.src = product.image;
         modalTitle.textContent = product.title;
@@ -30,12 +27,10 @@ function initProductModal() {
         productModal.style.display = 'block';
     }
 
-    // Function to close product modal
     function closeProductModal() {
         productModal.style.display = 'none';
     }
 
-    // Add event listeners to all product cards on both pages
     const productCards = document.querySelectorAll('.card');
 
     productCards.forEach(card => {
@@ -61,19 +56,16 @@ function initProductModal() {
         });
     });
 
-    // Close modal when clicking close button
     if (closeModal) {
         closeModal.addEventListener('click', closeProductModal);
     }
 
-    // Close modal when clicking outside
     window.addEventListener('click', function(event) {
         if (event.target === productModal) {
             closeProductModal();
         }
     });
 
-    // Add to cart functionality
     if (addToCart) {
         addToCart.addEventListener('click', function() {
             alert('Produkt byl přidán do košíku!');
