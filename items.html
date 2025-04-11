@@ -29,12 +29,12 @@
 
 <section class="container" id="products">
   <div class="row">
-    <div class="col-md-6 col-lg-4 mb-3" id="cleanup-pc">
+    <div class="col-md-6 col-lg-4 mb-3" id="product-item">
       <div class="card"><img src="pics/pcleanup.jfif" class="card-img-top" alt="product1">
-        <div class="card-body"><h5 class="card-title">Cleanup PC</h5>
-          <p class="card-text">Potřebujete pomoc s pročištěním vašeho Notebooku nebo počítače?
+        <div class="card-body"><h5 class="card-title" id="product-title">Cleanup PC</h5>
+          <p class="card-text" id="product-description">Potřebujete pomoc s pročištěním vašeho Notebooku nebo počítače?
             Naši profesionálové vám s tím pomohou a budete mít opět dost místa pro vaše soubory.</p>
-          <p class="fw-bold text-danger fs-5">PRICE : 19$</p>
+          <p class="fw-bold text-danger fs-5" id="product-price">PRICE : 19$</p>
           <a href="#" class="btn btn-primary d-block justify-content-end">Koupit</a></div>
       </div>
     </div>
@@ -149,10 +149,22 @@
   </div>
 </div>
 
+<div id="productModal" class="modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8);">
+  <div class="modal-content bg-white p-4" style="margin: 10% auto; padding: 20px; width: 80%; max-width: 600px; border-radius: 8px;">
+    <span id="closeModal" class="close" style="float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+    <img id="modalImage" src="" alt="Produkt" class="img-fluid mb-3">
+    <h2 id="modalTitle" class="mb-3"></h2>
+    <p id="modalDescription" class="mb-3"></p>
+    <p id="modalPrice" class="fw-bold text-danger fs-5 mb-3"></p>
+    <button id="addToCart" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Přidat do košíku</button>
+  </div>
+</div>
+
 <footer class="bg-dark text-white text-center py-3">
   Made by Jan Vašíček
 </footer>
 
 <script src="./js/bootstrap.bundle.min.js"></script>
+<script src="modal.js"></script>
 </body>
 </html>
